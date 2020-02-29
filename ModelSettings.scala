@@ -3,8 +3,6 @@ package io.ticofab.piai.learning
 import java.io.File
 import java.util.Random
 
-import io.ticofab.piai.folders.AllPaths
-import io.ticofab.piai.logging.CustomLogSupport
 import org.datavec.api.io.labels.ParentPathLabelGenerator
 import org.datavec.api.split.{FileSplit, InputSplit}
 import org.datavec.image.loader.BaseImageLoader
@@ -35,7 +33,7 @@ object Settings {
   // data settings
   val seed = 456 // the random seed
   val rng = new Random(seed)
-  val rootDir: File = AllPaths.learningDir.toFile
+  val rootDir: File = FILE_POINTING_TO_THE_IMAGES_ROOT_DIRECTORY
   val allowedExtensions: Array[String] = BaseImageLoader.ALLOWED_FORMATS
   val labelMaker = new ParentPathLabelGenerator()
   val fileSplit = new FileSplit(rootDir, allowedExtensions, rng)
