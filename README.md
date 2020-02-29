@@ -6,6 +6,10 @@ Building blocks to train your own binary classifier using Scala.
 
 [`ModelEvaluator.scala`](ModelEvaluator.scala) contains logic to load images, train and evaluate the model.
 
+The dataset to run your own experiments is avaiable [here](https://drive.google.com/drive/folders/1-O17UhjdJjtKJ1iAMDBJhaYMiTmhIIAi?usp=sharing).
+
+
+
 ## License
 
     Copyright 2020 Fabio Tiriticco - Fabway
