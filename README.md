@@ -8,7 +8,7 @@ Building blocks to train your own binary classifier using Scala.
 
 The dataset to run your own experiments is avaiable [here](https://drive.google.com/drive/folders/1-O17UhjdJjtKJ1iAMDBJhaYMiTmhIIAi?usp=sharing).
 
-
+![A plane on a bridge](plane.png)
 
 ## License
 
