@@ -2,8 +2,6 @@ package io.ticofab.piai.learning
 
 import java.util.concurrent.TimeUnit
 
-import io.ticofab.piai.folders.AllPaths
-import io.ticofab.piai.logging.CustomLogSupport
 import org.datavec.api.io.filters.RandomPathFilter
 import org.deeplearning4j.earlystopping.EarlyStoppingConfiguration
 import org.deeplearning4j.earlystopping.saver.{InMemoryModelSaver, LocalFileModelSaver}
@@ -40,7 +38,7 @@ object ModelEvaluator {
     // Construct the neural network
     info("Build trainer...")
     val saver =
-      if (Settings.saveModel) new LocalFileModelSaver(AllPaths.learningDir.toString)
+      if (Settings.saveModel) new LocalFileModelSaver(STRING_POINTING_TO_THE_OUTPUT_FOLDER)
       else new InMemoryModelSaver[MultiLayerNetwork]()
 
     val esConf = new EarlyStoppingConfiguration.Builder[MultiLayerNetwork]()
