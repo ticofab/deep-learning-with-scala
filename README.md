@@ -8,6 +8,8 @@ Building blocks to train your own binary classifier using Scala.
 
 The dataset to run your own experiments is avaiable [here](https://drive.google.com/drive/folders/1-O17UhjdJjtKJ1iAMDBJhaYMiTmhIIAi?usp=sharing).
 
+I gave a few talks about this project. Please have a look at the [slides](https://www.slideshare.net/FabioTiriticco/from-zero-to-deep-learning-with-scala-232229345) (and recording will come soon).
+
 ![A plane on a bridge](plane.png)
 
 ## License
