@@ -22,7 +22,7 @@ object Settings {
   // information of the non-flattened images
   val outputHeight = 25 // pixels
   val outputWidth = 171 // pixels
-  val depth = 3 // Number of input channels, or depth - 1 because we're in grayscale setting
+  val depth = 3 // Number of input channels, or depth - 3 because we're in RGB setting
 
   // training settings
   val numClasses = 2 // The number of possible outcomes
