@@ -88,4 +88,19 @@ object Settings {
     ir.initialize(inputSplit)
     new RecordReaderDataSetIterator(ir, batchSize, 1, numClasses) // always 1 for image record reader
   }
+  
+  // performs a quick prediction test over a few labels
+  def predictLabels(model: MultiLayerNetwork, iterator: RecordReaderDataSetIterator): Unit = {
+    var counter = 0
+    val allClassLabels = iterator.getLabels
+    while (iterator.hasNext && counter < 20) {
+      val testDataSet = iterator.next
+      val labels = testDataSet.getLabels
+      val knownLabel = labels.argMax(1).getInt(0) // maybe 0 is always the place of the known class?
+      val predictedLabel = model.predict(testDataSet.getFeatures)(0) // features have been automatically extracted
+      val expectedResult = allClassLabels.get(knownLabel)
+      val modelPrediction = allClassLabels.get(predictedLabel)
+      info("For a single example that is labeled [" + expectedResult + "] the model predicted [" + modelPrediction + "]")
+      counter = counter + 1
+    }
 }
